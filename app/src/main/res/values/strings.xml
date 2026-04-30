@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Actividades</string>
+    <string name="btn_name">Enviar</string>
+    <string name="txt_hint">Nombre</string>
+</resources>
