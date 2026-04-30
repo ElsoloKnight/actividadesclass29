@@ -11,6 +11,7 @@ import com.example.actividades.databinding.ActivityMainBinding
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -25,8 +26,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.btnSend.setOnClickListener {
+            val bundle = Bundle().apply {
+                putString("USER_NAME", binding.txtName.text.toString())
+                putInt("EDAD", 24)
+                putBoolean("IS_STUDENT", true)
+            }
             val intent = Intent(this, SecondaryActivity::class.java)
-            startActivity(intent)
+                intent.putExtras(bundle)
+                startActivity(intent)
+
         }
     }
 }
