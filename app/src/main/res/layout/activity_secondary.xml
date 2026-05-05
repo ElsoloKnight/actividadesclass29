@@ -35,4 +35,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvwName" />
 
+    <TextView
+        android:id="@+id/tvwHeroeNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="72dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvwHeroeNivel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvwHeroeNombre" />
+
+    <TextView
+        android:id="@+id/tvwHeroeVida"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="@+id/tvwHeroeNivel"
+        app:layout_constraintTop_toBottomOf="@+id/tvwHeroeNivel" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

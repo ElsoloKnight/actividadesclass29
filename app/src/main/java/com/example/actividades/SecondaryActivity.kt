@@ -24,9 +24,15 @@ class SecondaryActivity : AppCompatActivity() {
             insets
         }
         val bundle = intent.extras
+        val miHeroe = bundle?.getParcelable<Heroe>("MI_HEROE")
+
 
         binding.tvwName.text = bundle?.getString("USER_NAME")
         binding.txtEstudiante.text = bundle?.getBoolean("IS_STUDENT").toString()
         binding.txtEDAD.text = bundle?.getInt("EDAD").toString()
+        binding.tvwHeroeNombre.text = miHeroe?.nombre
+        binding.tvwHeroeNivel.text = miHeroe?.nivel.toString()
+        binding.tvwHeroeVida.text = miHeroe?.vida.toString()
+
     }
 }
