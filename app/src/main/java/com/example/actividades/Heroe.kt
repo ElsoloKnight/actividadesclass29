@@ -2,9 +2,11 @@ package com.example.actividades
 
 import android.os.Parcel
 import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
 @Parcelize
-class Heroe(var nombre: String, var nivel: Int, var vida: Int)//: Parcelable {
+class Heroe(val nombre: String, val nivel: Int, val vida: Int) : Parcelable {
+
     /**override fun describeContents(): Int = 0
     override fun writeToParcel(dest: Parcel, flags: Int) {
         dest.writeString(nombre)
@@ -21,5 +23,5 @@ class Heroe(var nombre: String, var nivel: Int, var vida: Int)//: Parcelable {
         override fun newArray(size: Int): Array<Heroe?>  = arrayOfNulls(size)
         }**/
 
-// }
+    }
 
